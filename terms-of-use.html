@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="LeaveCheck 服务协议，说明 LeaveCheck 应用功能、高级权益、购买订阅、用户内容、免责声明及使用规则。"
+  >
+
+  <meta name="robots" content="index, follow">
+
+  <title>LeaveCheck 服务协议 | White Rabbit Lab</title>
+
+  <style>
+    :root {
+      --primary: #6c63ff;
+      --primary-dark: #5148db;
+      --background: #f6f7fb;
+      --card: #ffffff;
+      --text: #202124;
+      --secondary-text: #60646c;
+      --border: #e6e8ef;
+      --notice-background: #f2f1ff;
+      --notice-border: #8a82ff;
+      --warning-background: #fff8e7;
+      --warning-border: #e4aa3a;
+      --shadow: 0 12px 35px rgba(25, 28, 45, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background: var(--background);
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        "PingFang SC",
+        "Hiragino Sans GB",
+        "Microsoft YaHei",
+        Arial,
+        sans-serif;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    a {
+      color: var(--primary-dark);
+      text-decoration: none;
+      overflow-wrap: anywhere;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page-header {
+      padding: 64px 20px 48px;
+      color: #ffffff;
+      text-align: center;
+      background:
+        linear-gradient(
+          135deg,
+          #6c63ff 0%,
+          #816fff 50%,
+          #4da7e8 100%
+        );
+    }
+
+    .page-header h1 {
+      margin: 0 0 12px;
+      font-size: clamp(32px, 6vw, 48px);
+      line-height: 1.25;
+      letter-spacing: 0.02em;
+    }
+
+    .page-header .brand {
+      margin: 0 0 20px;
+      font-size: 18px;
+      opacity: 0.92;
+    }
+
+    .date-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px 20px;
+      margin: 0;
+      font-size: 15px;
+      opacity: 0.9;
+    }
+
+    .container {
+      position: relative;
+      width: min(100% - 32px, 920px);
+      margin: -24px auto 48px;
+    }
+
+    .card {
+      padding: 38px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .intro {
+      margin-top: 0;
+      font-size: 17px;
+    }
+
+    .operator-info {
+      margin: 24px 0;
+      padding: 18px 20px;
+      background: #fafaff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    .operator-info p {
+      margin: 4px 0;
+    }
+
+    .notice,
+    .warning {
+      margin: 28px 0;
+      padding: 20px 22px;
+      border-left: 5px solid;
+      border-radius: 10px;
+    }
+
+    .notice {
+      background: var(--notice-background);
+      border-left-color: var(--notice-border);
+    }
+
+    .warning {
+      background: var(--warning-background);
+      border-left-color: var(--warning-border);
+    }
+
+    .notice strong,
+    .warning strong {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .notice strong {
+      color: #4038a8;
+    }
+
+    .warning strong {
+      color: #805b15;
+    }
+
+    .table-of-contents {
+      margin: 30px 0 40px;
+      padding: 22px 24px;
+      background: #fafbfe;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    .table-of-contents h2 {
+      margin-top: 0;
+      padding: 0;
+      border: 0;
+      font-size: 20px;
+    }
+
+    .table-of-contents ol {
+      margin: 12px 0 0;
+      padding-left: 24px;
+      columns: 2;
+      column-gap: 36px;
+    }
+
+    .table-of-contents li {
+      margin-bottom: 7px;
+      break-inside: avoid;
+    }
+
+    section {
+      scroll-margin-top: 20px;
+      margin-top: 46px;
+    }
+
+    section:first-of-type {
+      margin-top: 24px;
+    }
+
+    h2 {
+      margin: 0 0 22px;
+      padding-bottom: 12px;
+      font-size: 26px;
+      line-height: 1.4;
+      border-bottom: 2px solid var(--border);
+    }
+
+    h3 {
+      margin: 30px 0 12px;
+      color: #373280;
+      font-size: 20px;
+      line-height: 1.5;
+    }
+
+    p {
+      margin: 12px 0;
+    }
+
+    ul,
+    ol {
+      margin: 12px 0;
+      padding-left: 26px;
+    }
+
+    li {
+      margin: 8px 0;
+    }
+
+    .contact-box,
+    .plan-box {
+      margin: 18px 0;
+      padding: 22px;
+      background: #f8f8ff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    .contact-box p {
+      margin: 8px 0;
+    }
+
+    .back-to-top {
+      display: inline-block;
+      margin-top: 34px;
+      padding: 10px 18px;
+      color: #ffffff;
+      background: var(--primary);
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .back-to-top:hover {
+      background: var(--primary-dark);
+      text-decoration: none;
+    }
+
+    .footer {
+      width: min(100% - 32px, 920px);
+      margin: 0 auto 40px;
+      color: var(--secondary-text);
+      text-align: center;
+      font-size: 14px;
+    }
+
+    @media (max-width:700px){
+
+      .page-header{
+        padding:48px 18px 40px;
+      }
+
+      .container{
+        width:min(100% - 20px,920px);
+        margin-top:-18px;
+      }
+
+      .card{
+        padding:26px 20px;
+        border-radius:14px;
+      }
+
+      .table-of-contents ol{
+        columns:1;
+      }
+
+      h2{
+        font-size:22px;
+      }
+
+      h3{
+        font-size:18px;
+      }
+
+      body{
+        font-size:15px;
+      }
+    }
+
+  </style>
+</head>
+
+
+<body id="top">
+
+<header class="page-header">
+
+<h1>LeaveCheck 服务协议</h1>
+
+<p class="brand">
+White Rabbit Lab
+</p>
+
+<div class="date-list">
+<span>生效日期：2026年9月4日</span>
+<span>最近更新：2026年9月4日</span>
+</div>
+
+</header>
+
+
+<main class="container">
+
+<article class="card">
+
+
+<p class="intro">
+本《服务协议》（以下简称“本协议”）规定移动应用程序 LeaveCheck（以下简称“本应用”）的服务内容、使用规则以及用户与运营方之间的相关权利义务。
+</p>
+
+
+<div class="operator-info">
+
+<p>
+<strong>运营主体：</strong>
+White Rabbit Lab。完整法律主体名称以 Apple Developer 协议及 App Store Connect 登记、公示的信息为准。
+</p>
+
+<p>
+<strong>联系邮箱：</strong>
+<a href="mailto:chenyisy@gmail.com">
+chenyisy@gmail.com
+</a>
+</p>
+
+</div>
+
+
+<aside class="notice">
+
+<strong>
+本协议与 Apple 服务条款的关系
+</strong>
+
+本应用通过 Apple App Store 提供下载、购买及相关系统能力。除本协议外，您使用本应用仍需遵守适用的 Apple 媒体服务条款、Apple 标准最终用户许可协议（EULA）以及 Apple 购买确认页面显示的相关条件。
+
+若本协议与 Apple 平台规则或适用法律存在冲突，以相关强制性规则和法律要求为准。
+
+</aside>
+
+
+<p>
+使用 LeaveCheck 即表示您已阅读并同意本协议及相关隐私政策。如您不同意，请停止使用并卸载本应用。
+</p>
+
+
+<nav class="table-of-contents">
+
+<h2>
+目录
+</h2>
+
+<ol>
+
+<li>
+<a href="#service">
+服务内容
+</a>
+</li>
+
+<li>
+<a href="#account">
+使用资格与账号
+</a>
+</li>
+
+<li>
+<a href="#premium">
+免费使用与高级功能
+</a>
+</li>
+
+<li>
+<a href="#purchase">
+自动续订订阅、试用与付款
+</a>
+</li>
+
+<li>
+<a href="#data">
+用户内容与本地数据
+</a>
+</li>
+
+<li>
+<a href="#reminder">
+提醒和检查结果说明
+</a>
+</li>
+
+<li>
+<a href="#copyright">
+知识产权
+</a>
+</li>
+
+<li>
+<a href="#apple">
+第三方与 Apple 条款
+</a>
+</li>
+
+<li>
+<a href="#disclaimer">
+免责声明
+</a>
+</li>
+
+<li>
+<a href="#liability">
+责任限制
+</a>
+</li>
+
+<li>
+<a href="#termination">
+终止
+</a>
+</li>
+
+<li>
+<a href="#update">
+协议变更与适用法律
+</a>
+</li>
+
+<li>
+<a href="#contact">
+联系我们
+</a>
+</li>
+
+</ol>
+
+</nav>
+
+
+<section id="service">
+
+<h2>
+一、服务内容
+</h2>
+
+<p>
+LeaveCheck 提供离开前检查辅助功能，包括创建检查场景、管理清单项目、设置重复计划、本地提醒、检查记录、照片凭证、主屏幕小组件以及相关高级功能。
+</p>
+
+<p>
+本应用旨在帮助用户建立离开前确认习惯，提高日常事务管理效率。
+</p>
+
+<p>
+我们可能根据产品发展、系统要求或用户反馈，对功能进行优化、调整或停止部分功能。
+</p>
+
+</section>
+
+
+<section id="account">
+
+<h2>
+二、使用资格与账号
+</h2>
+
+<p>
+本应用当前不要求用户注册独立账号。
+</p>
+
+<p>
+您应具备使用本应用以及接受本协议所需的法律能力。未成年人应在监护人同意和指导下使用本应用。
+</p>
+
+<p>
+您负责保护自己的设备安全以及 Apple Account 安全，并对通过您的设备或账户产生的操作负责。
+</p>
+
+</section>
+
+
+<section id="premium">
+
+<h2>
+三、免费使用与高级功能
+</h2>
+
+<p>
+本应用可能提供基础免费功能以及高级功能。
+</p>
+
+<ul>
+
+<li>
+免费用户可以使用应用提供的基础检查功能，具体限制以当前版本及应用内说明为准。
+</li>
+
+<li>
+高级功能可能包括更多检查场景、更丰富的提醒能力、小组件功能增强以及其他 Premium 权益。
+</li>
+
+<li>
+高级权益的具体内容、价格及可用范围，以应用内购买页面实时展示的信息为准。
+</li>
+
+</ul>
+
+</section>
+<section id="purchase">
+
+<h2>
+四、自动续订订阅、试用与付款
+</h2>
+
+<ol>
+
+<li>
+<strong>支付处理：</strong>
+本应用中的高级功能通过 Apple App Store 应用内购买完成。支付、账单和交易处理均由 Apple 负责。本应用不会获取或保存您的银行卡号、CVV 或完整支付凭证。
+</li>
+
+<li>
+<strong>自动续订订阅：</strong>
+若您购买自动续订订阅，确认购买后，Apple 将按照购买页面显示的价格向您的 Apple Account 收取费用。订阅将在当前周期结束后自动续订，除非您按照 Apple 提供的方式提前取消。
+</li>
+
+<li>
+<strong>试用资格：</strong>
+如应用内购买页面提供免费试用或优惠体验，具体资格、期限及转换规则以 Apple 购买页面显示的信息为准。试用结束后可能按照购买页面显示的价格自动转为付费订阅，除非您提前取消。
+</li>
+
+<li>
+<strong>管理和取消：</strong>
+您可以通过 iOS 系统设置中的 Apple Account → 订阅管理订阅。删除本应用不会自动取消已有订阅。
+</li>
+
+<li>
+<strong>恢复购买：</strong>
+“恢复购买”用于恢复当前 Apple Account 已购买且符合条件的高级权益。不同 Apple Account 之间的购买记录无法转移。
+</li>
+
+<li>
+<strong>退款：</strong>
+App Store 购买退款由 Apple 根据其退款政策处理。运营方无法代替 Apple 批准或拒绝退款申请。
+</li>
+
+</ol>
+
+</section>
+
+
+
+<section id="data">
+
+<h2>
+五、用户内容与本地数据
+</h2>
+
+
+<p>
+您创建的检查场景、清单项目、提醒计划、完成记录以及照片凭证属于您的用户内容。
+</p>
+
+
+<p>
+本应用当前采用本地优先的数据存储方式。相关数据主要保存在您的设备以及应用与小组件共享的本地存储空间中，不会上传至 White Rabbit Lab 自建服务器。
+</p>
+
+
+<ul>
+
+<li>
+您应确保拥有添加照片、文字或其他内容所需的合法权利。
+</li>
+
+<li>
+您负责保存重要数据副本。
+</li>
+
+<li>
+卸载应用、清除应用数据、设备损坏、系统恢复失败或备份异常可能导致本地数据丢失。
+</li>
+
+<li>
+设备系统或用户启用的备份服务可能按照其自身规则处理应用数据，该处理由相应服务提供方负责。
+</li>
+
+</ul>
+
+
+<p>
+您不得利用本应用存储违法、侵权、欺诈或损害他人权益的内容，也不得尝试破解、绕过购买验证、破坏安全机制或干扰应用正常运行。
+</p>
+
+
+</section>
+
+
+
+<section id="reminder">
+
+<h2>
+六、提醒和检查结果的重要说明
+</h2>
+
+
+<p>
+LeaveCheck 是一款辅助检查工具，并不是安全系统、报警设备或专业检测服务。
+</p>
+
+
+<p>
+本应用提供的清单完成状态、提醒和照片凭证仅用于帮助您记录和管理个人检查流程，不代表现实中的事项一定已经完成，也不保证任何场所、设备、人员或财产处于安全状态。
+</p>
+
+
+<p>
+通知可能受到以下因素影响：
+
+</p>
+
+
+<ul>
+
+<li>
+用户关闭通知权限；
+</li>
+
+<li>
+系统勿扰模式或专注模式；
+</li>
+
+<li>
+设备电量、系统调度策略；
+</li>
+
+<li>
+系统更新或其他不可控因素。
+</li>
+
+</ul>
+
+
+<p>
+对于门窗、电器、火源、燃气、交通、医疗、安全防护等重要事项，请您根据实际情况自行确认，不应仅依赖本应用作出高风险判断。
+</p>
+
+
+</section>
+
+
+
+<section id="copyright">
+
+<h2>
+七、知识产权
+</h2>
+
+
+<p>
+除您创建的用户内容外，本应用的软件代码、界面设计、图形元素、品牌标识、文字内容以及相关知识产权归 White Rabbit Lab 或相关权利人所有。
+</p>
+
+
+<p>
+本协议仅授予您个人、有限、非独占、不可转让的使用许可。未经许可，您不得：
+
+</p>
+
+
+<ul>
+
+<li>
+复制、修改、分发或出售本应用；
+</li>
+
+<li>
+反向工程、反编译或尝试获取源代码；
+</li>
+
+<li>
+绕过付费机制或安全限制；
+</li>
+
+<li>
+将应用内容用于商业传播。
+</li>
+
+</ul>
+
+
+</section>
+
+
+
+<section id="apple">
+
+<h2>
+八、第三方与 Apple 条款
+</h2>
+
+
+<p>
+本应用依赖 Apple 提供的平台能力，包括：
+
+</p>
+
+
+<ul>
+
+<li>
+App Store 下载与应用内购买；
+</li>
+
+<li>
+StoreKit 购买验证；
+</li>
+
+<li>
+系统通知服务；
+</li>
+
+<li>
+相机和照片访问框架；
+</li>
+
+<li>
+主屏幕小组件框架。
+</li>
+
+</ul>
+
+
+<p>
+您使用上述功能时，还应遵守 Apple 的相关服务条款和隐私政策。
+</p>
+
+
+<p>
+Apple 仅提供平台服务，不对用户通过本应用创建的内容、检查记录或使用行为承担责任。
+</p>
+
+
+</section>
+
+
+
+<section id="disclaimer">
+
+<h2>
+九、服务可用性与免责声明
+</h2>
+
+
+<ol>
+
+<li>
+我们会合理维护本应用，但无法保证服务始终连续、无错误或适用于所有特定目的。
+</li>
+
+<li>
+由于设备故障、操作系统变化、Apple 服务异常、网络问题或不可抗力因素，部分功能可能暂时无法使用。
+</li>
+
+<li>
+本应用按照“现状”和“可用状态”提供。在法律允许范围内，我们不承担因超出合理控制范围因素造成的间接损失。
+</li>
+
+<li>
+本条款不会限制法律明确赋予消费者的不可放弃权利。
+</li>
+
+</ol>
+
+
+</section>
+
+
+
+<section id="liability">
+
+<h2>
+十、责任限制
+</h2>
+
+
+<p>
+在适用法律允许范围内，对于以下情况造成的损失，我们不承担超出法律允许范围之外的责任：
+
+</p>
+
+
+<ul>
+
+<li>
+用户依赖提醒或检查结果导致的损失；
+</li>
+
+<li>
+用户自身操作错误；
+</li>
+
+<li>
+设备损坏或系统故障；
+</li>
+
+<li>
+数据丢失；
+</li>
+
+<li>
+第三方平台服务异常。
+</li>
+
+</ul>
+
+
+<p>
+若适用法律规定必须承担相关责任，则按照法律规定执行。
+</p>
+
+
+</section>
+
+
+
+<section id="termination">
+
+<h2>
+十一、终止
+</h2>
+
+
+<p>
+您可以随时停止使用并卸载本应用。
+</p>
+
+
+<p>
+若您存在严重违反本协议、法律法规或 Apple 平台规则的行为，我们可以在合理且合法范围内限制相关服务。
+</p>
+
+
+<p>
+终止使用不会影响您依法享有的退款权利或消费者保护权利。
+</p>
+
+
+</section>
+
+
+
+<section id="update">
+
+<h2>
+十二、协议变更与适用法律
+</h2>
+
+
+<p>
+我们可能因功能更新、业务调整或法律要求更新本协议。
+</p>
+
+
+<p>
+更新后的版本将在应用内或在线页面展示，并标明新的生效日期。
+</p>
+
+
+<p>
+对于中国大陆用户，本协议适用中华人民共和国法律，但不影响您依据所在地法律享有的强制性消费者权益。
+</p>
+
+
+<p>
+如发生争议，双方应首先通过友好方式协商解决；无法解决时，由具有合法管辖权的机构处理。
+</p>
+
+
+</section>
+
+
+
+<section id="contact">
+
+<h2>
+十三、联系我们
+</h2>
+
+
+<div class="contact-box">
+
+<p>
+<strong>运营主体：</strong>
+White Rabbit Lab
+</p>
+
+
+<p>
+<strong>完整法律主体：</strong>
+以 Apple Developer 协议及 App Store Connect 登记、公示的信息为准。
+</p>
+
+
+<p>
+<strong>联系邮箱：</strong>
+
+<a href="mailto:chenyisy@gmail.com">
+chenyisy@gmail.com
+</a>
+
+</p>
+
+
+<p>
+<strong>应用入口：</strong>
+设置 → 关于 LeaveCheck → 服务协议
+</p>
+
+
+</div>
+
+
+</section>
+
+
+<a class="back-to-top" href="#top">
+返回顶部
+</a>
+
+
+</article>
+
+</main>
+
+
+<footer class="footer">
+
+<p>
+© 2026 White Rabbit Lab. All rights reserved.
+</p>
+
+</footer>
+
+
+</body>
+</html>
