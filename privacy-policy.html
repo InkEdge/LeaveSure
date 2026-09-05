@@ -7,25 +7,29 @@
 
   <meta
     name="description"
-    content="LeaveCheck 隐私政策，说明 LeaveCheck 如何处理离开检查场景、清单记录、照片凭证、通知提醒、应用内购买及系统权限。"
+    content="LeaveSure 隐私政策，说明 LeaveSure 如何处理离开检查场景、清单记录、照片凭证、通知提醒、应用内购买及系统权限。"
   >
 
   <meta name="robots" content="index, follow">
 
-  <title>LeaveCheck 隐私政策 | White Rabbit Lab</title>
+  <title>LeaveSure 隐私政策 | White Rabbit Lab</title>
 
   <style>
     :root {
-      --primary: #6c63ff;
-      --primary-dark: #5148db;
-      --background: #f6f7fb;
-      --card: #ffffff;
-      --text: #202124;
-      --secondary-text: #60646c;
-      --border: #e6e8ef;
-      --notice-background: #f2f1ff;
-      --notice-border: #8a82ff;
-      --shadow: 0 12px 35px rgba(25, 28, 45, 0.08);
+      --primary: #5B7CFF;
+      --primary-dark: #4A6AE0;
+      --primary-light: #8AA4FF;
+      --background-start: #0B1A33;
+      --background-end: #1A2D4D;
+      --card-bg: rgba(255, 255, 255, 0.92);
+      --card-border: rgba(255, 255, 255, 0.15);
+      --text: #1A2A3A;
+      --secondary-text: #4A5A6A;
+      --border: #E8EDF4;
+      --notice-background: rgba(91, 124, 255, 0.08);
+      --notice-border: #5B7CFF;
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+      --glass-blur: blur(20px);
     }
 
     * {
@@ -38,8 +42,9 @@
 
     body {
       margin: 0;
+      min-height: 100vh;
       color: var(--text);
-      background: var(--background);
+      background: linear-gradient(145deg, var(--background-start) 0%, var(--background-end) 100%);
       font-family:
         -apple-system,
         BlinkMacSystemFont,
@@ -51,6 +56,10 @@
         sans-serif;
       font-size: 16px;
       line-height: 1.8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 0 40px;
     }
 
     a {
@@ -64,52 +73,70 @@
     }
 
     .page-header {
-      padding: 64px 20px 48px;
+      width: min(100% - 32px, 920px);
+      padding: 48px 40px 40px;
+      margin-bottom: 24px;
       color: #ffffff;
       text-align: center;
-      background:
-        linear-gradient(
-          135deg,
-          #6c63ff 0%,
-          #816fff 50%,
-          #4da7e8 100%
-        );
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: var(--glass-blur);
+      -webkit-backdrop-filter: var(--glass-blur);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 24px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
     }
 
     .page-header h1 {
-      margin: 0 0 12px;
-      font-size: clamp(32px, 6vw, 48px);
+      margin: 0 0 8px;
+      font-size: clamp(28px, 5vw, 42px);
       line-height: 1.25;
       letter-spacing: 0.02em;
+      font-weight: 700;
+      background: linear-gradient(135deg, #ffffff 60%, var(--primary-light));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
     .page-header .brand {
-      margin: 0 0 20px;
+      margin: 0 0 16px;
       font-size: 18px;
-      opacity: 0.92;
+      opacity: 0.8;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+    }
+
+    .page-header .tagline {
+      margin: 0 0 20px;
+      font-size: 20px;
+      font-weight: 300;
+      opacity: 0.7;
+      letter-spacing: 0.04em;
     }
 
     .date-list {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 8px 20px;
+      gap: 8px 24px;
       margin: 0;
-      font-size: 15px;
-      opacity: 0.9;
+      font-size: 14px;
+      opacity: 0.65;
+      font-weight: 300;
     }
 
     .container {
       width: min(100% - 32px, 920px);
-      margin: -24px auto 48px;
       position: relative;
     }
 
     .card {
-      padding: 38px;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 18px;
+      padding: 44px 48px;
+      background: var(--card-bg);
+      backdrop-filter: var(--glass-blur);
+      -webkit-backdrop-filter: var(--glass-blur);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
       box-shadow: var(--shadow);
     }
 
@@ -120,10 +147,10 @@
 
     .operator-info {
       margin: 24px 0;
-      padding: 18px 20px;
-      background: #fafaff;
-      border: 1px solid var(--border);
-      border-radius: 12px;
+      padding: 18px 22px;
+      background: rgba(91, 124, 255, 0.06);
+      border: 1px solid rgba(91, 124, 255, 0.12);
+      border-radius: 14px;
     }
 
     .operator-info p {
@@ -132,24 +159,25 @@
 
     .notice {
       margin: 28px 0;
-      padding: 20px 22px;
+      padding: 22px 26px;
       background: var(--notice-background);
       border-left: 5px solid var(--notice-border);
-      border-radius: 10px;
+      border-radius: 12px;
     }
 
     .notice strong {
       display: block;
       margin-bottom: 8px;
-      color: #4038a8;
+      color: var(--primary-dark);
+      font-size: 17px;
     }
 
     .table-of-contents {
       margin: 30px 0 40px;
-      padding: 22px 24px;
-      background: #fafbfe;
-      border: 1px solid var(--border);
-      border-radius: 12px;
+      padding: 22px 28px;
+      background: rgba(91, 124, 255, 0.04);
+      border: 1px solid rgba(91, 124, 255, 0.08);
+      border-radius: 14px;
     }
 
     .table-of-contents h2 {
@@ -157,6 +185,7 @@
       padding: 0;
       border: 0;
       font-size: 20px;
+      color: var(--text);
     }
 
     .table-of-contents ol {
@@ -164,6 +193,16 @@
       padding-left: 24px;
       columns: 2;
       column-gap: 36px;
+    }
+
+    .table-of-contents a {
+      color: var(--text);
+      transition: color 0.2s;
+    }
+
+    .table-of-contents a:hover {
+      color: var(--primary-dark);
+      text-decoration: none;
     }
 
     section {
@@ -181,6 +220,13 @@
       font-size: 26px;
       line-height: 1.4;
       border-bottom: 2px solid var(--border);
+      color: var(--text);
+    }
+
+    h3 {
+      font-size: 18px;
+      margin: 20px 0 8px;
+      color: var(--text);
     }
 
     p {
@@ -197,34 +243,47 @@
       margin: 8px 0;
     }
 
-    .contact-box {
-      margin-top: 24px;
-      padding: 22px;
-      background: #f8f8ff;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-    }
-
     .footer {
       width: min(100% - 32px, 920px);
-      margin: 0 auto 40px;
-      color: var(--secondary-text);
+      margin: 32px auto 0;
+      color: rgba(255, 255, 255, 0.4);
       text-align: center;
-      font-size: 14px;
+      font-size: 13px;
+      font-weight: 300;
+      letter-spacing: 0.04em;
+    }
+
+    .footer a {
+      color: rgba(255, 255, 255, 0.5);
     }
 
     .back-to-top {
       display: inline-block;
       margin-top: 34px;
-      padding: 10px 18px;
+      padding: 10px 24px;
       color: #ffffff;
-      background: var(--primary);
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
       border-radius: 999px;
       font-size: 14px;
       font-weight: 600;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 16px rgba(91, 124, 255, 0.3);
+    }
+
+    .back-to-top:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(91, 124, 255, 0.4);
+      text-decoration: none;
     }
 
     @media (max-width: 700px) {
+      body {
+        padding: 12px 0 30px;
+      }
+
+      .page-header {
+        padding: 32px 20px 28px;
+      }
 
       .card {
         padding: 26px 20px;
@@ -241,6 +300,10 @@
       body {
         font-size: 15px;
       }
+
+      .page-header .tagline {
+        font-size: 16px;
+      }
     }
   </style>
 </head>
@@ -249,11 +312,11 @@
 
 <header class="page-header">
 
-<h1>LeaveCheck 隐私政策</h1>
+<h1>LeaveSure 隐私政策</h1>
 
-<p class="brand">
-White Rabbit Lab
-</p>
+<p class="brand">White Rabbit Lab</p>
+
+<p class="tagline">离家前，确认一次，安心出发。</p>
 
 <div class="date-list">
 <span>生效日期：2026年9月4日</span>
@@ -268,7 +331,7 @@ White Rabbit Lab
 <article class="card">
 
 <p class="intro">
-本《隐私政策》适用于移动应用程序 LeaveCheck（以下简称“本应用”）。
+本《隐私政策》适用于移动应用程序 LeaveSure（以下简称“本应用”）。
 </p>
 
 
@@ -289,7 +352,7 @@ White Rabbit Lab
 
 
 <p>
-感谢您使用 LeaveCheck。本政策说明本应用在您创建离开检查场景、执行清单、设置提醒、添加照片凭证、使用主屏幕小组件以及购买高级功能时如何处理信息。
+感谢您使用 LeaveSure。本政策说明本应用在您创建离开检查场景、执行清单、设置提醒、添加照片凭证、使用主屏幕小组件以及购买高级功能时如何处理信息。
 </p>
 
 
@@ -304,7 +367,7 @@ White Rabbit Lab
 重要说明：本应用的数据处理方式
 </strong>
 
-LeaveCheck 不提供用户账号系统，不建立开发者云端数据库，不出售、出租或共享您的个人信息。
+LeaveSure 不提供用户账号系统，不建立开发者云端数据库，不出售、出租或共享您的个人信息。
 
 主要数据均保存在您的设备本地。Apple 可能根据其自身隐私政策处理 App Store 购买、系统通知、备份等系统服务相关数据。
 
@@ -342,12 +405,13 @@ LeaveCheck 不提供用户账号系统，不建立开发者云端数据库，不
 </ol>
 
 </nav>
+
 <section id="data">
 
 <h2>一、我们处理的信息</h2>
 
 <p>
-LeaveCheck 采用本地优先的数据处理方式。除 Apple 系统服务所需处理的数据外，本应用不会将您的使用内容上传至开发者服务器。
+LeaveSure 采用本地优先的数据处理方式。除 Apple 系统服务所需处理的数据外，本应用不会将您的使用内容上传至开发者服务器。
 </p>
 
 <p>
@@ -476,7 +540,7 @@ Apple 返回的产品信息、交易验证结果、订阅状态、到期时间�
 <h2>二、信息的使用目的</h2>
 
 <p>
-本应用处理的信息仅用于提供 LeaveCheck 的核心功能，包括：
+本应用处理的信息仅用于提供 LeaveSure 的核心功能，包括：
 </p>
 
 <ul>
@@ -590,7 +654,6 @@ Apple 返回的产品信息、交易验证结果、订阅状态、到期时间�
 用于发送您设置的离开检查提醒。
 
 您可以随时在 iOS 系统设置中关闭通知权限。
-
 </li>
 
 
@@ -600,7 +663,7 @@ Apple 返回的产品信息、交易验证结果、订阅状态、到期时间�
 
 您可以通过：
 
-设置 → LeaveCheck
+设置 → LeaveSure
 
 管理相机、照片和通知权限。
 
@@ -609,3 +672,143 @@ Apple 返回的产品信息、交易验证结果、订阅状态、到期时间�
 </ol>
 
 </section>
+
+<!-- Section 5: 信息共享与第三方服务 -->
+<section id="sharing">
+  <h2>五、信息共享与第三方服务</h2>
+  <p>我们不出售、出租您的个人信息，也不将您的场景、清单、记录或照片凭证共享给广告商或数据经纪商。本应用使用以下平台服务：</p>
+  <ul>
+    <li><strong>Apple StoreKit / App Store：</strong>处理应用内购买、订阅、试用资格和购买恢复，适用 Apple 的条款与隐私政策；</li>
+    <li><strong>Apple 系统通知、相机、照片和小组件框架：</strong>在设备上提供相应功能。</li>
+  </ul>
+  <p>如未来有第三方代表我们处理或接触用户数据，我们将要求其按照本政策和 Apple 开发者指南提供相同或同等水平的保护，并仅将数据用于本政策说明的目的。</p>
+</section>
+
+<!-- Section 6: 追踪与分析 -->
+<section id="tracking">
+  <h2>六、追踪与分析</h2>
+  <p>本应用当前不包含第三方广告 SDK、第三方分析 SDK，不进行跨应用或跨网站追踪，也不使用信息进行定向广告。</p>
+</section>
+
+<!-- Section 7: 您的选择与权利 -->
+<section id="rights">
+  <h2>七、您的选择与权利</h2>
+  <p>您可以编辑或删除场景，并可在“设置”中使用“清除数据”功能删除本应用保存的场景、检查记录和照片凭证。删除场景不会自动删除已归档的历史检查记录及其照片凭证；重新拍摄照片时，原照片凭证会被替换。您也可以通过系统设置管理相机、照片和通知权限，或通过 Apple 账户管理订阅。</p>
+  <p>由于本应用当前没有账号和开发者服务器，我们通常无法从远程识别、导出或删除您设备上的数据；相关操作由您直接在设备上完成。若适用法律赋予您访问、更正、删除、撤回同意或投诉等权利，可通过下述方式联系我们。</p>
+</section>
+
+<!-- Section 8: 未成年人保护 -->
+<section id="children">
+  <h2>八、未成年人保护</h2>
+  <p>本应用并非专门面向儿童设计，也不会明知而收集儿童信息。未成年人应在监护人阅读并同意本政策后使用本应用及购买功能。</p>
+</section>
+
+<!-- Section 9: 安全 -->
+<section id="security">
+  <h2>九、安全</h2>
+  <p>本应用使用 iOS 提供的应用沙盒和文件保护能力保存本地数据。任何存储方式均无法保证绝对安全，请妥善保护您的设备、系统密码和 Apple 账户。</p>
+</section>
+
+<!-- Section 10: 政策更新 -->
+<section id="updates">
+  <h2>十、政策更新</h2>
+  <p>功能或法律要求发生变化时，我们可能更新本政策。更新后的版本会在本应用中提供，并标明新的生效日期。重大变更将在法律要求的范围内另行提示。</p>
+</section>
+
+<!-- Section 11: 联系我们 -->
+<section id="contact">
+  <h2>十一、联系我们</h2>
+  <p>运营主体：White Rabbit Lab。完整法律主体名称以 Apple Developer 协议及 App Store Connect 登记、公示的信息为准。</p>
+  <p>联系邮箱：chenyisy@gmail.com</p>
+  <p>如对本政策或数据处理有疑问，或需要行使法定权利，请发送邮件至上述邮箱，或通过 App Store 产品页面中的“App 支持”联系开发者。</p>
+</section>
+
+<!-- English version starts here -->
+<section style="margin-top: 60px; padding-top: 20px; border-top: 2px solid var(--border);">
+
+<h2 style="border-bottom: none;">LeaveSure Privacy Policy</h2>
+
+<p><strong>Effective: September 4, 2026</strong></p>
+
+<p>LeaveSure (the “App”) is provided by White Rabbit Lab (“we,” “us,” or “our”). This Policy explains how the App handles information when you create departure-check scenes, complete checklists, schedule reminders, attach photo evidence, use widgets, and purchase premium features.</p>
+
+<h3>1. Information We Handle</h3>
+<ul>
+  <li><strong>Scenes and check data:</strong> Scene names, checklist items, repeat rules, reminder times, completion states, and history that you create.</li>
+  <li><strong>Photo evidence:</strong> Images you intentionally capture or select, plus necessary metadata such as capture time, attachment time, and source. The App processes these only to present your check evidence.</li>
+  <li><strong>Notification settings:</strong> Notification authorization status and the timing and content needed to schedule local reminders.</li>
+  <li><strong>Purchase information:</strong> Product data, transaction verification results, subscription status, expiration date, and trial eligibility returned by Apple. We do not receive your card number or complete payment details.</li>
+  <li><strong>On-device preferences:</strong> Information needed for onboarding, the free-access period, review prompts, and premium entitlement state.</li>
+</ul>
+
+<h3>2. How We Use Information</h3>
+<ul>
+  <li>To save and display your scenes, checklists, records, and photo evidence;</li>
+  <li>To schedule on-device notifications at times you choose;</li>
+  <li>To show your next check in the Home Screen widget;</li>
+  <li>To verify and restore purchases and provide subscription or lifetime access; and</li>
+  <li>To maintain local app state, migrate older local data, and recover from storage errors.</li>
+</ul>
+
+<h3>3. Storage and Retention</h3>
+<p>Scenes, checklists, records, photos, and preferences are stored on your device or in the local container shared by the App and its widget. The App currently has no account system and does not upload this content to our servers. Your operating system or a device-backup service you enable may back up app data under that provider’s own terms.</p>
+<p>Data remains until you delete the relevant content, use Clear Data in the App, or uninstall the App. Limited local backup or migration copies may be retained on the device to preserve data integrity. Clear Data removes the scenes, records, and photo evidence managed by the App.</p>
+
+<h3>4. Permissions</h3>
+<ul>
+  <li><strong>Camera:</strong> To capture check evidence when you choose to use this feature.</li>
+  <li><strong>Photo library:</strong> To receive a photo you intentionally select as check evidence.</li>
+  <li><strong>Notifications:</strong> To deliver departure-check reminders you configure.</li>
+</ul>
+<p>You can change these permissions in system settings. Refusing an optional permission prevents the related feature from working but does not block unrelated features.</p>
+
+<h3>5. Sharing and Platform Services</h3>
+<p>We do not sell or rent your personal information, and we do not share your scenes, checklists, records, or photos with advertisers or data brokers. The App uses:</p>
+<ul>
+  <li><strong>Apple StoreKit and the App Store</strong> to process purchases, subscriptions, trial eligibility, and restoration under Apple’s terms and privacy policy; and</li>
+  <li><strong>Apple system notification, camera, photo, and widget frameworks</strong> to provide their respective on-device features.</li>
+</ul>
+<p>If a third party handles or accesses user data on our behalf in the future, we will require it to provide the same or equivalent protection required by this Policy and Apple’s developer guidelines and to use the data only for the purposes described in this Policy.</p>
+
+<h3>6. Tracking and Analytics</h3>
+<p>The App currently contains no third-party advertising or analytics SDKs, does not track you across apps or websites, and does not use information for targeted advertising.</p>
+
+<h3>7. Your Choices and Rights</h3>
+<p>You can edit or delete scenes and use Clear Data in Settings to delete scenes, inspection records, and photo evidence stored by the App. Deleting a scene does not automatically delete archived inspection history or its photo evidence; retaking a photo replaces the previous evidence. You can also manage camera, photo, and notification access in system settings and manage subscriptions through your Apple account.</p>
+<p>Because there is no App account or developer server, we generally cannot remotely identify, export, or delete data held on your device. Where applicable law grants access, correction, deletion, withdrawal, or complaint rights, contact us as described below.</p>
+
+<h3>8. Children</h3>
+<p>The App is not specifically directed to children, and we do not knowingly collect children’s information. Minors should use the App and make purchases only with a parent or guardian’s involvement.</p>
+
+<h3>9. Security</h3>
+<p>The App uses the iOS app sandbox and file-protection capabilities for local storage. No storage method is completely secure, so protect your device passcode and Apple account.</p>
+
+<h3>10. Changes to This Policy</h3>
+<p>We may update this Policy as features or legal requirements change. The revised version will be available in the App with a new effective date, and material changes will be highlighted where required by law.</p>
+
+<h3>11. Contact</h3>
+<p>Operator: White Rabbit Lab. The operator’s complete legal name is the name registered and disclosed under the applicable Apple Developer agreement and in App Store Connect.</p>
+<p>Contact email: chenyisy@gmail.com</p>
+<p>For privacy questions or rights requests, email us at the address above or contact the developer through App Support on the App Store product page.</p>
+
+</section>
+<!-- English version ends here -->
+
+<div style="text-align: center; margin-top: 40px;">
+  <a href="#top" class="back-to-top">↑ 回到顶部</a>
+</div>
+
+</article>
+
+</main>
+
+<footer class="footer">
+
+<p>
+© 2026 White Rabbit Lab &middot; LeaveSure &middot; 本地优先 · 不建立用户画像
+</p>
+
+</footer>
+
+</body>
+</html>
