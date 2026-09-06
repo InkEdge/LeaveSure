@@ -1,795 +1,457 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta
-    name="description"
-    content="LeaveSure 隐私政策，说明 LeaveSure 如何处理离开检查场景、清单记录、照片凭证、通知提醒、应用内购买及系统权限。"
-  >
-
-  <meta name="robots" content="index, follow">
-
-  <title>LeaveSure 隐私政策 | White Rabbit Lab</title>
-
+  <title>LeaveSure Privacy Policy · White Rabbit Lab</title>
   <style>
-    :root {
-      --primary: #5B7CFF;
-      --primary-dark: #4A6AE0;
-      --primary-light: #8AA4FF;
-      --background-start: #0B1A33;
-      --background-end: #1A2D4D;
-      --card-bg: rgba(255, 255, 255, 0.92);
-      --card-border: rgba(255, 255, 255, 0.15);
-      --text: #1A2A3A;
-      --secondary-text: #4A5A6A;
-      --border: #E8EDF4;
-      --notice-background: rgba(91, 124, 255, 0.08);
-      --notice-border: #5B7CFF;
-      --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
-      --glass-blur: blur(20px);
-    }
-
     * {
+      margin: 0;
+      padding: 0;
       box-sizing: border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
-      margin: 0;
+      background: linear-gradient(145deg, #0B1A33 0%, #1A2D4D 100%);
       min-height: 100vh;
-      color: var(--text);
-      background: linear-gradient(145deg, var(--background-start) 0%, var(--background-end) 100%);
-      font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        "PingFang SC",
-        "Hiragino Sans GB",
-        "Microsoft YaHei",
-        Arial,
-        sans-serif;
-      font-size: 16px;
-      line-height: 1.8;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 20px 0 40px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+      padding: 24px 16px 40px;
+      line-height: 1.7;
+      color: #1A2A3A;
     }
 
-    a {
-      color: var(--primary-dark);
-      text-decoration: none;
-      overflow-wrap: anywhere;
+    .container {
+      width: 100%;
+      max-width: 920px;
     }
 
-    a:hover {
-      text-decoration: underline;
-    }
-
+    /* header */
     .page-header {
-      width: min(100% - 32px, 920px);
-      padding: 48px 40px 40px;
-      margin-bottom: 24px;
-      color: #ffffff;
-      text-align: center;
       background: rgba(255, 255, 255, 0.06);
-      backdrop-filter: var(--glass-blur);
-      -webkit-backdrop-filter: var(--glass-blur);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
       border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 24px;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      border-radius: 28px;
+      padding: 40px 32px 32px;
+      margin-bottom: 28px;
+      text-align: center;
+      color: #fff;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
     }
 
     .page-header h1 {
-      margin: 0 0 8px;
-      font-size: clamp(28px, 5vw, 42px);
-      line-height: 1.25;
-      letter-spacing: 0.02em;
+      font-size: clamp(30px, 5.5vw, 44px);
       font-weight: 700;
-      background: linear-gradient(135deg, #ffffff 60%, var(--primary-light));
+      letter-spacing: -0.01em;
+      margin-bottom: 8px;
+      background: linear-gradient(135deg, #ffffff 60%, #8AA4FF);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
 
     .page-header .brand {
-      margin: 0 0 16px;
       font-size: 18px;
-      opacity: 0.8;
       font-weight: 400;
-      letter-spacing: 0.1em;
+      opacity: 0.75;
+      letter-spacing: 0.12em;
+      margin-bottom: 12px;
     }
 
     .page-header .tagline {
-      margin: 0 0 20px;
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 300;
-      opacity: 0.7;
+      opacity: 0.6;
+      margin-bottom: 18px;
       letter-spacing: 0.04em;
     }
 
-    .date-list {
+    .meta-list {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 8px 24px;
-      margin: 0;
+      gap: 8px 28px;
       font-size: 14px;
-      opacity: 0.65;
       font-weight: 300;
+      opacity: 0.6;
     }
 
-    .container {
-      width: min(100% - 32px, 920px);
-      position: relative;
-    }
-
+    /* card */
     .card {
-      padding: 44px 48px;
-      background: var(--card-bg);
-      backdrop-filter: var(--glass-blur);
-      -webkit-backdrop-filter: var(--glass-blur);
-      border: 1px solid var(--card-border);
-      border-radius: 24px;
-      box-shadow: var(--shadow);
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 28px;
+      padding: 40px 44px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+    }
+
+    .card p {
+      margin: 1.2em 0;
+    }
+
+    .card ul, .card ol {
+      margin: 0.8em 0 1.2em 1.6em;
+    }
+
+    .card li {
+      margin: 0.5em 0;
     }
 
     .intro {
-      margin-top: 0;
-      font-size: 17px;
+      font-size: 1.05rem;
+      margin-top: 0.2em;
     }
 
-    .operator-info {
-      margin: 24px 0;
-      padding: 18px 22px;
-      background: rgba(91, 124, 255, 0.06);
+    .operator-block {
+      background: rgba(91, 124, 255, 0.05);
       border: 1px solid rgba(91, 124, 255, 0.12);
+      border-radius: 16px;
+      padding: 18px 22px;
+      margin: 24px 0;
+    }
+
+    .operator-block p {
+      margin: 0.25em 0;
+    }
+
+    .notice-box {
+      background: rgba(91, 124, 255, 0.07);
+      border-left: 5px solid #5B7CFF;
       border-radius: 14px;
-    }
-
-    .operator-info p {
-      margin: 4px 0;
-    }
-
-    .notice {
+      padding: 20px 24px;
       margin: 28px 0;
-      padding: 22px 26px;
-      background: var(--notice-background);
-      border-left: 5px solid var(--notice-border);
-      border-radius: 12px;
     }
 
-    .notice strong {
+    .notice-box strong {
       display: block;
-      margin-bottom: 8px;
-      color: var(--primary-dark);
-      font-size: 17px;
+      font-size: 1.05rem;
+      color: #3A5ADF;
+      margin-bottom: 6px;
     }
 
-    .table-of-contents {
-      margin: 30px 0 40px;
-      padding: 22px 28px;
-      background: rgba(91, 124, 255, 0.04);
+    .toc {
+      background: rgba(91, 124, 255, 0.03);
       border: 1px solid rgba(91, 124, 255, 0.08);
-      border-radius: 14px;
+      border-radius: 18px;
+      padding: 22px 28px;
+      margin: 32px 0 40px;
     }
 
-    .table-of-contents h2 {
+    .toc h2 {
+      font-size: 1.3rem;
       margin-top: 0;
+      border: none;
       padding: 0;
-      border: 0;
-      font-size: 20px;
-      color: var(--text);
+      color: #1A2A3A;
     }
 
-    .table-of-contents ol {
-      margin: 12px 0 0;
-      padding-left: 24px;
-      columns: 2;
-      column-gap: 36px;
+    .toc ol {
+      columns: 2 180px;
+      column-gap: 32px;
+      padding-left: 20px;
+      margin: 10px 0 0;
+      list-style: decimal;
     }
 
-    .table-of-contents a {
-      color: var(--text);
-      transition: color 0.2s;
-    }
-
-    .table-of-contents a:hover {
-      color: var(--primary-dark);
+    .toc a {
+      color: #1A2A3A;
       text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    .toc a:hover {
+      color: #4A6AE0;
+      text-decoration: underline;
     }
 
     section {
       scroll-margin-top: 20px;
-      margin-top: 46px;
+      margin-top: 44px;
     }
 
     section:first-of-type {
-      margin-top: 24px;
+      margin-top: 12px;
     }
 
     h2 {
-      margin: 0 0 22px;
+      font-size: 1.8rem;
+      font-weight: 650;
+      border-bottom: 2px solid #E8EDF4;
       padding-bottom: 12px;
-      font-size: 26px;
-      line-height: 1.4;
-      border-bottom: 2px solid var(--border);
-      color: var(--text);
+      margin: 0 0 24px;
+      color: #0F1E2E;
+      letter-spacing: -0.01em;
     }
 
     h3 {
-      font-size: 18px;
-      margin: 20px 0 8px;
-      color: var(--text);
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin: 1.6em 0 0.4em;
+      color: #1F3347;
     }
 
-    p {
-      margin: 12px 0;
+    a {
+      color: #4A6AE0;
+      text-decoration: none;
+      word-break: break-word;
     }
 
-    ul,
-    ol {
-      margin: 12px 0;
-      padding-left: 26px;
+    a:hover {
+      text-decoration: underline;
     }
 
-    li {
-      margin: 8px 0;
-    }
-
-    .footer {
-      width: min(100% - 32px, 920px);
-      margin: 32px auto 0;
-      color: rgba(255, 255, 255, 0.4);
+    .back-top {
+      display: inline-block;
+      margin: 40px auto 0;
+      padding: 12px 30px;
+      background: linear-gradient(135deg, #5B7CFF, #4A6AE0);
+      color: #fff;
+      border-radius: 60px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      box-shadow: 0 6px 20px rgba(91, 124, 255, 0.3);
+      transition: transform 0.15s, box-shadow 0.2s;
       text-align: center;
-      font-size: 13px;
+    }
+
+    .back-top:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(91, 124, 255, 0.4);
+      text-decoration: none;
+    }
+
+    .footer-note {
+      margin-top: 32px;
+      color: rgba(255, 255, 255, 0.35);
+      text-align: center;
+      font-size: 0.85rem;
       font-weight: 300;
       letter-spacing: 0.04em;
     }
 
-    .footer a {
+    .footer-note a {
       color: rgba(255, 255, 255, 0.5);
     }
 
-    .back-to-top {
-      display: inline-block;
-      margin-top: 34px;
-      padding: 10px 24px;
-      color: #ffffff;
-      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-      border-radius: 999px;
-      font-size: 14px;
-      font-weight: 600;
-      transition: transform 0.2s, box-shadow 0.2s;
-      box-shadow: 0 4px 16px rgba(91, 124, 255, 0.3);
-    }
-
-    .back-to-top:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 28px rgba(91, 124, 255, 0.4);
-      text-decoration: none;
-    }
-
+    /* responsive */
     @media (max-width: 700px) {
-      body {
-        padding: 12px 0 30px;
-      }
-
-      .page-header {
-        padding: 32px 20px 28px;
-      }
-
       .card {
-        padding: 26px 20px;
+        padding: 26px 18px;
       }
-
-      .table-of-contents ol {
+      .page-header {
+        padding: 28px 16px 24px;
+      }
+      .toc ol {
         columns: 1;
       }
-
       h2 {
-        font-size: 22px;
+        font-size: 1.5rem;
       }
-
       body {
-        font-size: 15px;
-      }
-
-      .page-header .tagline {
-        font-size: 16px;
+        padding: 12px 8px 30px;
       }
     }
   </style>
 </head>
+<body>
+<div class="container">
 
-<body id="top">
+  <!-- header -->
+  <header class="page-header">
+    <h1>LeaveSure<br>Privacy Policy</h1>
+    <p class="brand">White Rabbit Lab</p>
+    <p class="tagline">Departure checks, simplified.</p>
+    <div class="meta-list">
+      <span>Effective: September 4, 2026</span>
+      <span>Updated: September 4, 2026</span>
+    </div>
+  </header>
 
-<header class="page-header">
+  <!-- main card -->
+  <main class="card">
 
-<h1>LeaveSure 隐私政策</h1>
+    <p class="intro"><strong>LeaveSure</strong> (the “App”) is provided by White Rabbit Lab (“we,” “us,” or “our”). This Policy explains how the App handles information when you create departure-check scenes, complete checklists, schedule reminders, attach photo evidence, use widgets, and purchase premium features.</p>
 
-<p class="brand">White Rabbit Lab</p>
+    <div class="operator-block">
+      <p><strong>Operator:</strong> White Rabbit Lab (legal entity as registered under Apple Developer Agreement and App Store Connect).</p>
+      <p><strong>Support:</strong> Contact us via App Support on the App Store product page.</p>
+    </div>
 
-<p class="tagline">离家前，确认一次，安心出发。</p>
+    <p>The App is designed with a local-first approach. Except for processing required by Apple system services, your scenes, checklists, inspection records, and photo evidence are <strong>not uploaded</strong> to our servers.</p>
 
-<div class="date-list">
-<span>生效日期：2026年9月4日</span>
-<span>最近更新：2026年9月4日</span>
+    <div class="notice-box">
+      <strong>🔒 Local-first privacy</strong>
+      LeaveSure does not have a user account system, does not maintain a developer-side cloud database, and does not sell, rent, or share your personal information. Main data stays on your device. Apple may process purchase, notification, backup, and related system data per its own privacy policy.
+    </div>
+
+    <!-- Table of Contents -->
+    <nav class="toc">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#info">Information We Handle</a></li>
+        <li><a href="#use">How We Use Information</a></li>
+        <li><a href="#storage">Storage and Retention</a></li>
+        <li><a href="#permissions">Permissions</a></li>
+        <li><a href="#sharing">Sharing and Platform Services</a></li>
+        <li><a href="#tracking">Tracking and Analytics</a></li>
+        <li><a href="#rights">Your Choices and Rights</a></li>
+        <li><a href="#children">Children</a></li>
+        <li><a href="#security">Security</a></li>
+        <li><a href="#updates">Changes to This Policy</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ol>
+    </nav>
+
+    <!-- 1. Information -->
+    <section id="info">
+      <h2>1. Information We Handle</h2>
+      <p>LeaveSure is local-first. Except for data processed by Apple system services, we do not upload your usage content to our servers. We may handle the following types of information:</p>
+
+      <h3>Scenes and check data</h3>
+      <ul>
+        <li><strong>Content:</strong> Scene names, checklist items, repeat rules, reminder times, completion states, and history that you create.</li>
+        <li><strong>Purpose:</strong> Create, manage, and display your departure-check workflows.</li>
+        <li><strong>Storage:</strong> Stored locally on your device; not uploaded.</li>
+      </ul>
+
+      <h3>Photo evidence</h3>
+      <ul>
+        <li><strong>Access:</strong> Only when you intentionally capture a photo or select one from the photo library as check evidence.</li>
+        <li><strong>Content:</strong> Images and necessary metadata such as capture time, attachment time, and source.</li>
+        <li><strong>Purpose:</strong> Help you confirm item status (e.g., locks, appliances, packing).</li>
+        <li><strong>Storage:</strong> Stored locally; never sent to our servers.</li>
+      </ul>
+
+      <h3>Notification settings</h3>
+      <ul>
+        <li><strong>Content:</strong> Notification authorization status and timing/content needed to schedule local reminders.</li>
+        <li><strong>Purpose:</strong> Deliver departure-check reminders at your chosen times.</li>
+        <li><strong>Processing:</strong> Handled by iOS system notification services.</li>
+      </ul>
+
+      <h3>Purchase information</h3>
+      <ul>
+        <li><strong>Content:</strong> Product data, transaction verification results, subscription status, expiration date, and trial eligibility returned by Apple.</li>
+        <li><strong>Purpose:</strong> Verify purchases, restore purchases, and provide premium access.</li>
+        <li><strong>Payment data:</strong> We do not receive your card number, CVV, full payment details, or Apple ID password.</li>
+      </ul>
+
+      <h3>On-device preferences</h3>
+      <ul>
+        <li>First-use status;</li>
+        <li>Free-trial start time;</li>
+        <li>Review prompt state;</li>
+        <li>Premium entitlement state;</li>
+        <li>Other local configuration to keep the App working properly.</li>
+      </ul>
+    </section>
+
+    <!-- 2. Use -->
+    <section id="use">
+      <h2>2. How We Use Information</h2>
+      <p>Information is used only to provide LeaveSure’s core features:</p>
+      <ul>
+        <li>Save and display your scenes, checklists, records, and photo evidence;</li>
+        <li>Schedule on-device notifications at times you choose;</li>
+        <li>Show your next check in the Home Screen widget;</li>
+        <li>Verify and restore purchases and provide subscription or lifetime access;</li>
+        <li>Maintain local app state, migrate older data, and recover from storage errors.</li>
+      </ul>
+      <p>We do not sell your personal information, nor do we use your check records, photo evidence, or usage habits for ad profiling.</p>
+    </section>
+
+    <!-- 3. Storage -->
+    <section id="storage">
+      <h2>3. Storage and Retention</h2>
+      <p>Scenes, checklists, records, photos, and preferences are stored on your device or in the local container shared by the App and its widget. The App currently has no account system and does not upload this content to our servers.</p>
+      <p>Your operating system, iCloud, or other backup services may back up app data under their own terms — that processing is governed by the respective provider.</p>
+      <p>Data remains until you:</p>
+      <ul>
+        <li>Delete the relevant content in the App;</li>
+        <li>Use “Clear Data” in Settings;</li>
+        <li>Uninstall the App.</li>
+      </ul>
+      <p>Limited local backup or migration copies may be retained on the device to preserve data integrity. Clear Data removes scenes, records, and photo evidence managed by the App.</p>
+    </section>
+
+    <!-- 4. Permissions -->
+    <section id="permissions">
+      <h2>4. Permissions</h2>
+      <ul>
+        <li><strong>Camera:</strong> To capture check evidence when you choose to use this feature. iOS will ask for permission when you first use the camera.</li>
+        <li><strong>Photo library:</strong> To receive a photo you intentionally select as check evidence. The App only accesses content you actively choose via the system picker.</li>
+        <li><strong>Notifications:</strong> To deliver departure-check reminders you configure. You can turn off notifications in system settings anytime.</li>
+      </ul>
+      <p>You can manage all permissions in <strong>Settings → LeaveSure</strong>. Refusing an optional permission prevents the related feature from working but does not block unrelated features.</p>
+    </section>
+
+    <!-- 5. Sharing -->
+    <section id="sharing">
+      <h2>5. Sharing and Platform Services</h2>
+      <p>We do not sell or rent your personal information, and we do not share your scenes, checklists, records, or photos with advertisers or data brokers. The App uses:</p>
+      <ul>
+        <li><strong>Apple StoreKit / App Store</strong> to process purchases, subscriptions, trial eligibility, and restoration under Apple’s terms and privacy policy; and</li>
+        <li><strong>Apple system notification, camera, photo, and widget frameworks</strong> to provide their respective on-device features.</li>
+      </ul>
+      <p>If a third party handles or accesses user data on our behalf in the future, we will require it to provide the same or equivalent protection required by this Policy and Apple’s developer guidelines and to use the data only for the purposes described in this Policy.</p>
+    </section>
+
+    <!-- 6. Tracking -->
+    <section id="tracking">
+      <h2>6. Tracking and Analytics</h2>
+      <p>The App currently contains no third-party advertising or analytics SDKs, does not track you across apps or websites, and does not use information for targeted advertising.</p>
+    </section>
+
+    <!-- 7. Rights -->
+    <section id="rights">
+      <h2>7. Your Choices and Rights</h2>
+      <p>You can edit or delete scenes and use “Clear Data” in Settings to delete scenes, inspection records, and photo evidence stored by the App. Deleting a scene does not automatically delete archived inspection history or its photo evidence; retaking a photo replaces the previous evidence. You can also manage camera, photo, and notification access in system settings and manage subscriptions through your Apple account.</p>
+      <p>Because there is no App account or developer server, we generally cannot remotely identify, export, or delete data held on your device. Where applicable law grants access, correction, deletion, withdrawal, or complaint rights, contact us as described below.</p>
+    </section>
+
+    <!-- 8. Children -->
+    <section id="children">
+      <h2>8. Children</h2>
+      <p>The App is not specifically directed to children, and we do not knowingly collect children’s information. Minors should use the App and make purchases only with a parent or guardian’s involvement.</p>
+    </section>
+
+    <!-- 9. Security -->
+    <section id="security">
+      <h2>9. Security</h2>
+      <p>The App uses the iOS app sandbox and file-protection capabilities for local storage. No storage method is completely secure, so protect your device passcode and Apple account.</p>
+    </section>
+
+    <!-- 10. Updates -->
+    <section id="updates">
+      <h2>10. Changes to This Policy</h2>
+      <p>We may update this Policy as features or legal requirements change. The revised version will be available in the App with a new effective date, and material changes will be highlighted where required by law.</p>
+    </section>
+
+    <!-- 11. Contact -->
+    <section id="contact">
+      <h2>11. Contact</h2>
+      <p><strong>Operator:</strong> White Rabbit Lab. The operator’s complete legal name is the name registered and disclosed under the applicable Apple Developer agreement and in App Store Connect.</p>
+      <p><strong>Contact email:</strong> <a href="mailto:chenyisy@gmail.com">chenyisy@gmail.com</a></p>
+      <p>For privacy questions or rights requests, email us at the address above or contact the developer through App Support on the App Store product page.</p>
+    </section>
+
+    <!-- back to top -->
+    <div style="text-align: center; margin-top: 44px;">
+      <a href="#" class="back-top">↑ Back to top</a>
+    </div>
+
+  </main>
+
+  <!-- footer -->
+  <footer class="footer-note">
+    <p>© 2026 White Rabbit Lab · LeaveSure · Local-first · No user profiling</p>
+  </footer>
+
 </div>
-
-</header>
-
-<main class="container">
-
-<article class="card">
-
-<p class="intro">
-本《隐私政策》适用于移动应用程序 LeaveSure（以下简称“本应用”）。
-</p>
-
-<div class="operator-info">
-
-<p>
-<strong>运营者：</strong>
-以 White Rabbit Lab 名义运营，Apple Developer
-账户主体以 App Store Connect 公示信息为准。
-</p>
-
-<p>
-<strong>用户支持：</strong>
-请通过 App Store 产品页面中的“App 支持”联系开发者。
-</p>
-
-</div>
-
-<p>
-感谢您使用 LeaveSure。本政策说明本应用在您创建离开检查场景、执行清单、设置提醒、添加照片凭证、使用主屏幕小组件以及购买高级功能时如何处理信息。
-</p>
-
-<p>
-本应用采用本地优先设计。除 Apple 系统服务所必需的处理外，您的场景、清单、检查记录和照片凭证不会上传至开发者服务器。
-</p>
-
-<aside class="notice">
-
-<strong>
-重要说明：本应用的数据处理方式
-</strong>
-
-LeaveSure 不提供用户账号系统，不建立开发者云端数据库，不出售、出租或共享您的个人信息。
-
-主要数据均保存在您的设备本地。Apple 可能根据其自身隐私政策处理 App Store 购买、系统通知、备份等系统服务相关数据。
-
-</aside>
-
-<nav class="table-of-contents">
-
-<h2>目录</h2>
-
-<ol>
-
-<li><a href="#data">我们处理的信息</a></li>
-
-<li><a href="#purpose">信息的使用目的</a></li>
-
-<li><a href="#storage">存储位置与保留期限</a></li>
-
-<li><a href="#permissions">权限</a></li>
-
-<li><a href="#sharing">信息共享与第三方服务</a></li>
-
-<li><a href="#tracking">追踪与分析</a></li>
-
-<li><a href="#rights">您的选择与权利</a></li>
-
-<li><a href="#children">未成年人保护</a></li>
-
-<li><a href="#security">安全</a></li>
-
-<li><a href="#updates">政策更新</a></li>
-
-<li><a href="#contact">联系我们</a></li>
-
-</ol>
-
-</nav>
-
-<section id="data">
-
-<h2>一、我们处理的信息</h2>
-
-<p>
-LeaveSure 采用本地优先的数据处理方式。除 Apple 系统服务所需处理的数据外，本应用不会将您的使用内容上传至开发者服务器。
-</p>
-
-<p>
-我们可能处理以下类型的信息：
-</p>
-
-<h3>A. 场景与检查数据</h3>
-
-<ul>
-
-<li>
-<strong>内容：</strong>
-您创建的离开检查场景名称、清单项目、重复规则、提醒时间、完成状态以及历史检查记录。
-</li>
-
-<li>
-<strong>用途：</strong>
-用于创建、展示和管理您的离开检查流程，帮助您在指定场景下完成物品确认。
-</li>
-
-<li>
-<strong>存储方式：</strong>
-上述数据默认保存在您的设备本地，不会上传至开发者服务器。
-</li>
-
-</ul>
-
-<h3>B. 照片凭证</h3>
-
-<ul>
-
-<li>
-<strong>访问条件：</strong>
-仅当您主动拍摄照片或从照片图库选择图片作为检查凭证时，本应用才会访问相关图片。
-</li>
-
-<li>
-<strong>处理内容：</strong>
-包括照片文件以及展示检查凭证所需的必要信息，例如添加时间、来源等元数据。
-</li>
-
-<li>
-<strong>用途：</strong>
-用于帮助您确认物品状态，例如离开前拍摄门锁、电器关闭状态或物品摆放情况。
-</li>
-
-<li>
-<strong>存储方式：</strong>
-照片凭证保存在您的设备本地，不会上传到开发者服务器。
-</li>
-
-</ul>
-
-<h3>C. 通知设置</h3>
-
-<ul>
-
-<li>
-<strong>内容：</strong>
-通知授权状态，以及生成设备本地提醒所需的时间和提醒内容。
-</li>
-
-<li>
-<strong>用途：</strong>
-用于在您设置的时间提醒执行离开检查。
-</li>
-
-<li>
-<strong>处理方式：</strong>
-提醒由 iOS 系统通知服务完成。
-</li>
-
-</ul>
-
-<h3>D. 应用内购买与高级权益</h3>
-
-<ul>
-
-<li>
-<strong>内容：</strong>
-Apple 返回的产品信息、交易验证结果、订阅状态、到期时间以及试用资格。
-</li>
-
-<li>
-<strong>用途：</strong>
-用于验证购买状态、恢复购买以及提供高级功能。
-</li>
-
-<li>
-<strong>支付信息：</strong>
-本应用不会获得您的银行卡号、CVV、完整付款资料或 Apple ID 密码。
-</li>
-
-</ul>
-
-<h3>E. 本机设置</h3>
-
-<p>
-本应用可能保存以下本地偏好：
-</p>
-
-<ul>
-
-<li>首次使用状态；</li>
-
-<li>免费试用期开始时间；</li>
-
-<li>评价提示显示状态；</li>
-
-<li>高级权益状态；</li>
-
-<li>其他保证应用正常运行所需的本地配置。</li>
-
-</ul>
-
-</section>
-
-<section id="purpose">
-
-<h2>二、信息的使用目的</h2>
-
-<p>
-本应用处理的信息仅用于提供 LeaveSure 的核心功能，包括：
-</p>
-
-<ul>
-
-<li>
-保存和展示您创建的场景、清单、检查记录以及照片凭证；
-</li>
-
-<li>
-根据您的设置安排设备本地通知提醒；
-</li>
-
-<li>
-在主屏幕小组件中展示下一次检查任务；
-</li>
-
-<li>
-验证购买、恢复购买并提供订阅或终身高级权益；
-</li>
-
-<li>
-维护应用本地状态、迁移旧版本数据以及排查存储相关问题。
-</li>
-
-</ul>
-
-<p>
-我们不会出售您的个人信息，也不会将您的检查记录、照片凭证或使用习惯用于广告画像。
-</p>
-
-</section>
-
-<section id="storage">
-
-<h2>三、存储位置与保留期限</h2>
-
-<p>
-场景、清单、检查记录、照片凭证以及应用偏好均保存在您的设备本地，或本应用与小组件共享的系统本地容器中。
-</p>
-
-<p>
-当前版本不提供账号系统，也没有开发者管理的云端服务器，因此我们不会在服务器中保存您的个人数据。
-</p>
-
-<p>
-您的设备操作系统、iCloud 或其他备份服务可能按照其自身规则备份应用数据。此类处理由相应服务提供方负责。
-</p>
-
-<p>
-数据会持续保留，直到：
-</p>
-
-<ul>
-
-<li>
-您在应用内主动删除相关内容；
-</li>
-
-<li>
-您使用“清除数据”等维护功能；
-</li>
-
-<li>
-您卸载本应用。
-</li>
-
-</ul>
-
-<p>
-为保证本地数据写入完整性，本应用可能在设备上保留有限的本地迁移副本或缓存数据。使用应用提供的数据清理功能时，会同步删除应用管理范围内的数据。
-</p>
-
-</section>
-
-<section id="permissions">
-
-<h2>四、权限</h2>
-
-<ol>
-
-<li>
-
-<strong>相机权限：</strong>
-
-仅用于拍摄离开检查照片凭证。当您主动使用拍照功能时，iOS 会请求相机权限。
-
-拒绝授权后，您仍可以使用其他不依赖照片的检查功能。
-
-</li>
-
-<li>
-
-<strong>照片图库权限：</strong>
-
-用于选择已有照片作为检查凭证。
-
-本应用仅访问您通过系统照片选择器主动选择的内容。
-
-</li>
-
-<li>
-
-<strong>通知权限：</strong>
-
-用于发送您设置的离开检查提醒。
-
-您可以随时在 iOS 系统设置中关闭通知权限。
-</li>
-
-<li>
-
-<strong>权限撤回：</strong>
-
-您可以通过：
-
-设置 → LeaveSure
-
-管理相机、照片和通知权限。
-
-</li>
-
-</ol>
-
-</section>
-
-<!-- Section 5: 信息共享与第三方服务 -->
-<section id="sharing">
-  <h2>五、信息共享与第三方服务</h2>
-  <p>我们不出售、出租您的个人信息，也不将您的场景、清单、记录或照片凭证共享给广告商或数据经纪商。本应用使用以下平台服务：</p>
-  <ul>
-    <li><strong>Apple StoreKit / App Store：</strong>处理应用内购买、订阅、试用资格和购买恢复，适用 Apple 的条款与隐私政策；</li>
-    <li><strong>Apple 系统通知、相机、照片和小组件框架：</strong>在设备上提供相应功能。</li>
-  </ul>
-  <p>如未来有第三方代表我们处理或接触用户数据，我们将要求其按照本政策和 Apple 开发者指南提供相同或同等水平的保护，并仅将数据用于本政策说明的目的。</p>
-</section>
-
-<!-- Section 6: 追踪与分析 -->
-<section id="tracking">
-  <h2>六、追踪与分析</h2>
-  <p>本应用当前不包含第三方广告 SDK、第三方分析 SDK，不进行跨应用或跨网站追踪，也不使用信息进行定向广告。</p>
-</section>
-
-<!-- Section 7: 您的选择与权利 -->
-<section id="rights">
-  <h2>七、您的选择与权利</h2>
-  <p>您可以编辑或删除场景，并可在“设置”中使用“清除数据”功能删除本应用保存的场景、检查记录和照片凭证。删除场景不会自动删除已归档的历史检查记录及其照片凭证；重新拍摄照片时，原照片凭证会被替换。您也可以通过系统设置管理相机、照片和通知权限，或通过 Apple 账户管理订阅。</p>
-  <p>由于本应用当前没有账号和开发者服务器，我们通常无法从远程识别、导出或删除您设备上的数据；相关操作由您直接在设备上完成。若适用法律赋予您访问、更正、删除、撤回同意或投诉等权利，可通过下述方式联系我们。</p>
-</section>
-
-<!-- Section 8: 未成年人保护 -->
-<section id="children">
-  <h2>八、未成年人保护</h2>
-  <p>本应用并非专门面向儿童设计，也不会明知而收集儿童信息。未成年人应在监护人阅读并同意本政策后使用本应用及购买功能。</p>
-</section>
-
-<!-- Section 9: 安全 -->
-<section id="security">
-  <h2>九、安全</h2>
-  <p>本应用使用 iOS 提供的应用沙盒和文件保护能力保存本地数据。任何存储方式均无法保证绝对安全，请妥善保护您的设备、系统密码和 Apple 账户。</p>
-</section>
-
-<!-- Section 10: 政策更新 -->
-<section id="updates">
-  <h2>十、政策更新</h2>
-  <p>功能或法律要求发生变化时，我们可能更新本政策。更新后的版本会在本应用中提供，并标明新的生效日期。重大变更将在法律要求的范围内另行提示。</p>
-</section>
-
-<!-- Section 11: 联系我们 -->
-<section id="contact">
-  <h2>十一、联系我们</h2>
-  <p>运营主体：White Rabbit Lab。完整法律主体名称以 Apple Developer 协议及 App Store Connect 登记、公示的信息为准。</p>
-  <p>联系邮箱：chenyisy@gmail.com</p>
-  <p>如对本政策或数据处理有疑问，或需要行使法定权利，请发送邮件至上述邮箱，或通过 App Store 产品页面中的“App 支持”联系开发者。</p>
-</section>
-
-<!-- English version starts here -->
-<section style="margin-top: 60px; padding-top: 20px; border-top: 2px solid var(--border);">
-
-<h2 style="border-bottom: none;">LeaveSure Privacy Policy</h2>
-
-<p><strong>Effective: September 4, 2026</strong></p>
-
-<p>LeaveSure (the “App”) is provided by White Rabbit Lab (“we,” “us,” or “our”). This Policy explains how the App handles information when you create departure-check scenes, complete checklists, schedule reminders, attach photo evidence, use widgets, and purchase premium features.</p>
-
-<h3>1. Information We Handle</h3>
-<ul>
-  <li><strong>Scenes and check data:</strong> Scene names, checklist items, repeat rules, reminder times, completion states, and history that you create.</li>
-  <li><strong>Photo evidence:</strong> Images you intentionally capture or select, plus necessary metadata such as capture time, attachment time, and source. The App processes these only to present your check evidence.</li>
-  <li><strong>Notification settings:</strong> Notification authorization status and the timing and content needed to schedule local reminders.</li>
-  <li><strong>Purchase information:</strong> Product data, transaction verification results, subscription status, expiration date, and trial eligibility returned by Apple. We do not receive your card number or complete payment details.</li>
-  <li><strong>On-device preferences:</strong> Information needed for onboarding, the free-access period, review prompts, and premium entitlement state.</li>
-</ul>
-
-<h3>2. How We Use Information</h3>
-<ul>
-  <li>To save and display your scenes, checklists, records, and photo evidence;</li>
-  <li>To schedule on-device notifications at times you choose;</li>
-  <li>To show your next check in the Home Screen widget;</li>
-  <li>To verify and restore purchases and provide subscription or lifetime access; and</li>
-  <li>To maintain local app state, migrate older local data, and recover from storage errors.</li>
-</ul>
-
-<h3>3. Storage and Retention</h3>
-<p>Scenes, checklists, records, photos, and preferences are stored on your device or in the local container shared by the App and its widget. The App currently has no account system and does not upload this content to our servers. Your operating system or a device-backup service you enable may back up app data under that provider’s own terms.</p>
-<p>Data remains until you delete the relevant content, use Clear Data in the App, or uninstall the App. Limited local backup or migration copies may be retained on the device to preserve data integrity. Clear Data removes the scenes, records, and photo evidence managed by the App.</p>
-
-<h3>4. Permissions</h3>
-<ul>
-  <li><strong>Camera:</strong> To capture check evidence when you choose to use this feature.</li>
-  <li><strong>Photo library:</strong> To receive a photo you intentionally select as check evidence.</li>
-  <li><strong>Notifications:</strong> To deliver departure-check reminders you configure.</li>
-</ul>
-<p>You can change these permissions in system settings. Refusing an optional permission prevents the related feature from working but does not block unrelated features.</p>
-
-<h3>5. Sharing and Platform Services</h3>
-<p>We do not sell or rent your personal information, and we do not share your scenes, checklists, records, or photos with advertisers or data brokers. The App uses:</p>
-<ul>
-  <li><strong>Apple StoreKit and the App Store</strong> to process purchases, subscriptions, trial eligibility, and restoration under Apple’s terms and privacy policy; and</li>
-  <li><strong>Apple system notification, camera, photo, and widget frameworks</strong> to provide their respective on-device features.</li>
-</ul>
-<p>If a third party handles or accesses user data on our behalf in the future, we will require it to provide the same or equivalent protection required by this Policy and Apple’s developer guidelines and to use the data only for the purposes described in this Policy.</p>
-
-<h3>6. Tracking and Analytics</h3>
-<p>The App currently contains no third-party advertising or analytics SDKs, does not track you across apps or websites, and does not use information for targeted advertising.</p>
-
-<h3>7. Your Choices and Rights</h3>
-<p>You can edit or delete scenes and use Clear Data in Settings to delete scenes, inspection records, and photo evidence stored by the App. Deleting a scene does not automatically delete archived inspection history or its photo evidence; retaking a photo replaces the previous evidence. You can also manage camera, photo, and notification access in system settings and manage subscriptions through your Apple account.</p>
-<p>Because there is no App account or developer server, we generally cannot remotely identify, export, or delete data held on your device. Where applicable law grants access, correction, deletion, withdrawal, or complaint rights, contact us as described below.</p>
-
-<h3>8. Children</h3>
-<p>The App is not specifically directed to children, and we do not knowingly collect children’s information. Minors should use the App and make purchases only with a parent or guardian’s involvement.</p>
-
-<h3>9. Security</h3>
-<p>The App uses the iOS app sandbox and file-protection capabilities for local storage. No storage method is completely secure, so protect your device passcode and Apple account.</p>
-
-<h3>10. Changes to This Policy</h3>
-<p>We may update this Policy as features or legal requirements change. The revised version will be available in the App with a new effective date, and material changes will be highlighted where required by law.</p>
-
-<h3>11. Contact</h3>
-<p>Operator: White Rabbit Lab. The operator’s complete legal name is the name registered and disclosed under the applicable Apple Developer agreement and in App Store Connect.</p>
-<p>Contact email: chenyisy@gmail.com</p>
-<p>For privacy questions or rights requests, email us at the address above or contact the developer through App Support on the App Store product page.</p>
-
-</section>
-<!-- English version ends here -->
-
-<div style="text-align: center; margin-top: 40px;">
-  <a href="#top" class="back-to-top">↑ 回到顶部</a>
-</div>
-
-</article>
-
-</main>
-
-<footer class="footer">
-
-<p>
-© 2026 White Rabbit Lab &middot; LeaveSure &middot; 本地优先 · 不建立用户画像
-</p>
-
-</footer>
-
 </body>
 </html>
